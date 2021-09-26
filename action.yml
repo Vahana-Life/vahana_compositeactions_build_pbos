@@ -9,22 +9,22 @@ inputs:
 runs:
   using: "composite"
   steps: 
-      - run: D:\arma3work\drive\_work\Schedule_Task_Wait.ps1 {{ inputs.objectvar }}_Build
+     - run: D:\arma3work\drive\_work\Schedule_Task_Wait.ps1 ${{ inputs.objectvar }}_Build
        shell: powershell
      
-     - run: rm D:\arma3work\Modpack_TestServer\@Vahana-Life-TestServer\addons\{{ inputs.objectvar }}*
+     - run: rm D:\arma3work\Modpack_TestServer\@Vahana-Life-TestServer\addons\${{ inputs.objectvar }}*
        shell: powershell
      
-     - run: rm D:\cloud\Shares\Modpack_TestServer\@Vahana-Life-TestServer\addons\{{ inputs.objectvar }}*
+     - run: rm D:\cloud\Shares\Modpack_TestServer\@Vahana-Life-TestServer\addons\${{ inputs.objectvar }}*
        shell: powershell
      
-     - run: Copy-item -Force -Recurse -Verbose D:\arma3work\Pack\Addons\{{ inputs.objectvar }}* -Destination "D:\arma3work\Modpack_TestServer\@Vahana-Life-TestServer\addons\"
+     - run: Copy-item -Force -Recurse -Verbose D:\arma3work\Pack\Addons\${{ inputs.objectvar }}* -Destination "D:\arma3work\Modpack_TestServer\@Vahana-Life-TestServer\addons\"
        shell: powershell
       
-      - run: Copy-item -Force -Recurse -Verbose D:\arma3work\Pack\Addons\{{ inputs.objectvar }}* -Destination "D:\cloud\Shares\Modpack_TestServer\@Vahana-Life-TestServer\addons\"
+     - run: Copy-item -Force -Recurse -Verbose D:\arma3work\Pack\Addons\${{ inputs.objectvar }}* -Destination "D:\cloud\Shares\Modpack_TestServer\@Vahana-Life-TestServer\addons\"
        shell: powershell
      
-     - run: rm D:\arma3work\Pack\Addons\{{ inputs.objectvar }}*
+     - run: rm D:\arma3work\Pack\Addons\${{ inputs.objectvar }}*
        shell: powershell
      
      - run: D:\arma3work\drive\_work\Remove_A3Sync.ps1
