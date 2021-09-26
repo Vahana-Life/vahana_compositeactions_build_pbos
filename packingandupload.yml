@@ -29,4 +29,4 @@ runs:
             java -jar ArmA3Sync.jar -BUILD "VahanaLifeTest"
             Write-Host ""
             D:\arma3work\drive\_work\Upload_A3SyncRepo.ps1
-      shell: pwd
+      shell: pwsh
