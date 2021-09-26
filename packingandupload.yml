@@ -1,10 +1,6 @@
-name: 'Update Local Files'
-description: 'Updated the locale data for the build'
+name: 'Build PBOs and  Build Sync'
+description: 'Build PBOs and  Build Syn'
 inputs:
-  workpath:
-    description: 'The folder to copy the files to'
-    required: true
-    default: '~'
   objectvar:
     description: 'The Object Variable'
     required: true
