@@ -5,8 +5,7 @@ inputs:
     description: 'The Object Variable'
     required: true
     default: '~'
-outputs:
-  
+
 runs:
   using: "composite"
   steps: 
