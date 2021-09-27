@@ -26,15 +26,3 @@ runs:
      
      - run: rm D:\arma3work\Pack\Addons\${{ inputs.objectvar }}*
        shell: powershell
-     
-     - run: D:\arma3work\drive\_work\Remove_A3Sync.ps1
-       shell: powershell
-     
-     - run: D:\arma3work\drive\_work\Upload_TestModpack.ps1
-       shell: powershell
-     
-     - run: D:\arma3work\drive\_work\Build_A3Sync.ps1
-       shell: powershell
-     
-     - run: D:\arma3work\drive\_work\Upload_A3SyncRepo.ps1
-       shell: powershell
