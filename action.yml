@@ -5,11 +5,15 @@ inputs:
     description: 'The Object Variable'
     required: true
     default: '~'
+  workpath:
+    description: 'The folder to copy the files to'
+    required: true
+    default: '~'
 
 runs:
   using: "composite"
   steps: 
-     - run: D:\arma3work\drive\_work\Schedule_Task_Wait.ps1 ${{ inputs.objectvar }}_Build
+     - run: D:\arma3work\drive\_work\Schedule_Task_Wait.ps1 ${{ inputs.workpath }}
        shell: powershell
      
      - run: rm D:\arma3work\Modpack_TestServer\@Vahana-Life-TestServer\addons\${{ inputs.objectvar }}*
